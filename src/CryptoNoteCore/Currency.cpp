@@ -181,7 +181,7 @@ const std::vector<uint64_t> Currency::POWERS_OF_TEN = {
                  }
                  }
                 if (height >= 300000) {
-                if (alreadyGeneratedCoins + CryptoNote::parameters::TAIL_EMISSION_REWARD <= m_moneySupply || baseReward <                   CryptoNote::parameters::TAIL_EMISSION_REWARD)
+                if (alreadyGeneratedCoins + CryptoNote::parameters::TAIL_EMISSION_REWARD >= m_moneySupply || baseReward <                   CryptoNote::parameters::TAIL_EMISSION_REWARD)
 		{
 		     baseReward = CryptoNote::parameters::TAIL_EMISSION_REWARD;
                  }
