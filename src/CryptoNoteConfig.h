@@ -72,7 +72,7 @@ const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json"
 } // parameters
 
 const char     CRYPTONOTE_NAME[]                             = "catalyst";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff0001c5f5b7d9a43a029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121010d828c2f9ce4058510214db6d7c1f3e5d22663c4008391022083d752160e5e00";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff0001c5f5b7d9a43a029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101f073420e411283e26ad6226ae35eab17ecef1174e84d5ff0855a78d6496e6aa8";
 
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  1;
 const uint8_t  BLOCK_MAJOR_VERSION_1                         =  1;
@@ -85,8 +85,8 @@ const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by def
 const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  200;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
-const int      P2P_DEFAULT_PORT                              =  3456;
-const int      RPC_DEFAULT_PORT                              =  6543;
+const int      P2P_DEFAULT_PORT                              =  1005;
+const int      RPC_DEFAULT_PORT                              =  1055;
 
 const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT                =  1000;
 const size_t   P2P_LOCAL_GRAY_PEERLIST_LIMIT                 =  5000;
@@ -109,8 +109,8 @@ const uint32_t P2P_IDLE_CONNECTION_KILL_INTERVAL             = (5 * 60);      //
 const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "FF9507CA55455F37A3B783EE2C5123B8B6A34A0C5CAAE050922C6254161480C1";
 
 const char* const SEED_NODES[] = { 
-  "seed1.catalyst.cash:3456",
-  "seed2.catalyst.cash:3456",
+  "seed1.catalyst.cash:1005",
+  "seed2.catalyst.cash:1005",
 };
 
 struct CheckpointData {
