@@ -13,13 +13,13 @@ BEGIN
     BEGIN
         BLOCK "040904b0"
         BEGIN
-            VALUE "CompanyName", "Catalyst Foundation"
-            VALUE "FileDescription", "Catalyst network daemon"
+            VALUE "CompanyName", "PhotonCoin Foundation"
+            VALUE "FileDescription", "PhotonCoin network daemon"
             VALUE "FileVersion", "3.0.3"
-            VALUE "InternalName", "Catalyst.exe"
-            VALUE "LegalCopyright", "Copyright (C) 2010-2018, Catalyst Developers"
-            VALUE "OriginalFilename", "Catalyst.exe"
-            VALUE "ProductName", "Catalyst"
+            VALUE "InternalName", "PhotonCoin.exe"
+            VALUE "LegalCopyright", "Copyright (C) 2018, PhotonCoin Developers"
+            VALUE "OriginalFilename", "PhotonCoin.exe"
+            VALUE "ProductName", "PhotonCoin"
             VALUE "ProductVersion", "3.0.3"
         END
     END
@@ -29,4 +29,4 @@ BEGIN
     END
 END
 
-101               ICON                    "cn.ico"
+101               ICON                    "photon.ico"

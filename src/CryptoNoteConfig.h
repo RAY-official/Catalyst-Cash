@@ -9,7 +9,7 @@ const uint64_t DIFFICULTY_TARGET                             = 120; // seconds
 const uint64_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000; //for HF block
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x171f54; // addresses start with "cat"
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x6d91; // addresses start with "RP"
 const size_t   CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 10;
 const size_t   CRYPTONOTE_TX_SPENDABLE_AGE                   = 6;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = DIFFICULTY_TARGET * 3;
@@ -17,11 +17,11 @@ const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = DIFFICULTY_TARGET
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 11;
 
 // MONEY_SUPPLY - total number coins to be generated
-const uint64_t MONEY_SUPPLY                                  = UINT64_C(2100000000000000000);
-const uint64_t TAIL_EMISSION_REWARD                          = UINT64_C(10000000000); //what this?
+const uint64_t MONEY_SUPPLY                                  = UINT64_C(250000000000000);
+const uint64_t TAIL_EMISSION_REWARD                          = UINT64_C(115000000); //what this?
 const size_t CRYPTONOTE_COIN_VERSION                         = 1;
-const uint64_t PRE_BLOCK_REWARD	                             = UINT64_C(84000000000000000);
-const unsigned EMISSION_SPEED_FACTOR                         = 20;
+const uint64_t PRE_BLOCK_REWARD	                             = UINT64_C(10000000000000);
+const unsigned EMISSION_SPEED_FACTOR                         = 21;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
@@ -30,7 +30,7 @@ const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2  = 1000000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 100000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
 const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
-const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 8;
+const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 6;
 const uint64_t MINIMUM_FEE                                   = 1000000; // for now Minimum fee would be 0.001 XAT for a while 
 const uint64_t DEFAULT_DUST_THRESHOLD                        = 100000000;
 const uint64_t MAX_TX_MIXIN_SIZE                             = 20;
@@ -72,8 +72,8 @@ const char     CRYPTONOTE_BLOCKCHAIN_INDICES_FILENAME[]      = "blockchainindice
 const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json";
 } // parameters
 
-const char     CRYPTONOTE_NAME[]                             = "catalyst";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff0001c5f5b7d9a43a029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101f073420e411283e26ad6226ae35eab17ecef1174e84d5ff0855a78d6496e6aa8";
+const char     CRYPTONOTE_NAME[]                             = "PhotonCoin";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "";
 
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  1;
 const uint8_t  BLOCK_MAJOR_VERSION_1                         =  1;
@@ -86,8 +86,8 @@ const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by def
 const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  200;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
-const int      P2P_DEFAULT_PORT                              =  1005;
-const int      RPC_DEFAULT_PORT                              =  1055;
+const int      P2P_DEFAULT_PORT                              = 6881;
+const int      RPC_DEFAULT_PORT                              = 8881;
 
 const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT                =  1000;
 const size_t   P2P_LOCAL_GRAY_PEERLIST_LIMIT                 =  5000;
@@ -107,11 +107,11 @@ const uint32_t P2P_IP_BLOCKTIME                              = (60 * 60 * 24);//
 const uint32_t P2P_IP_FAILS_BEFORE_BLOCK                     = 10;
 const uint32_t P2P_IDLE_CONNECTION_KILL_INTERVAL             = (5 * 60);      //5 minutes
 
-const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "FF9507CA55455F37A3B783EE2C5123B8B6A34A0C5CAAE050922C6254161480C1";
+const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "0000000000000000000000000000000000000000000000000000000000000000";
 
 const char* const SEED_NODES[] = { 
-  "seed1.catalyst.cash:1005",
-  "seed2.catalyst.cash:1005",
+  "18.191.90.28:6881",
+  "18.191.233.111:6881" 
 };
 
 struct CheckpointData {
@@ -120,8 +120,8 @@ struct CheckpointData {
 };
 
 const std::initializer_list<CheckpointData> CHECKPOINTS = { 
-  {422,	"b1468010ba439de5ba5adb913a0292eef730fec05bbfb23dfc2f1a75f9463fed" },
-  {430,	"7da14d73833d93256d5724ed4ac62983081e34d8a3b6708f9b0eb42c228bddbb" },
+  //{422,	"b1468010ba439de5ba5adb913a0292eef730fec05bbfb23dfc2f1a75f9463fed" },
+  //{430,	"7da14d73833d93256d5724ed4ac62983081e34d8a3b6708f9b0eb42c228bddbb" },
 };
 
 } // CryptoNote
