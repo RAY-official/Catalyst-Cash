@@ -368,18 +368,15 @@ bool RpcServer::on_get_info(const COMMAND_RPC_GET_INFO::request& req, COMMAND_RP
   res.alt_blocks_count = m_core.get_alternative_blocks_count();
   uint64_t total_conn = m_p2p.get_connections_count();
   res.outgoing_connections_count = m_p2p.get_outgoing_connections_count();
+  //res.rpc_connections_count = get_connections_count();
   res.incoming_connections_count = total_conn - res.outgoing_connections_count;
   res.white_peerlist_size = m_p2p.getPeerlistManager().get_white_peers_count();
   res.grey_peerlist_size = m_p2p.getPeerlistManager().get_gray_peers_count();
   res.last_known_block_index = std::max(static_cast<uint32_t>(1), m_protocolQuery.getObservedHeight()) - 1;
   res.top_block_hash = Common::podToHex(m_core.getBlockIdByHeight(m_core.get_current_blockchain_height() - 1));
   res.version = PROJECT_VERSION_LONG;
-  if (m_fee_address.empty()) {
-	  res.fee_address = "";
-  }
-  else {
-	  res.fee_address = m_fee_address;
-  }
+  res.fee_address = m_fee_address.empty() ? std::string() : m_fee_address;
+  res.start_time = (uint64_t)m_core.getStartTime();
   res.status = CORE_RPC_STATUS_OK;
   return true;
 }
@@ -441,7 +438,7 @@ bool RpcServer::on_send_raw_tx(const COMMAND_RPC_SEND_RAW_TX::request& req, COMM
     return true;
   }
 
-  if (tvc.m_verifivation_failed)
+  if (tvc.m_verification_failed)
   {
     logger(INFO) << "[on_send_raw_tx]: tx verification failed";
     res.status = "Failed";

@@ -11,6 +11,7 @@ const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
 const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x171f54; // addresses start with "cat"
 const size_t   CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 10;
+const size_t   CRYPTONOTE_TX_SPENDABLE_AGE                   = 6;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = DIFFICULTY_TARGET * 3;
 
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 11;
@@ -119,8 +120,8 @@ struct CheckpointData {
 };
 
 const std::initializer_list<CheckpointData> CHECKPOINTS = { 
-  {330,	"9d46aaebae422461970862e46a87489a814991a0c93bead492e4b169ad555c54" },
-  {342,	"aa1d0a6d6a29e69caee7c0858f19b5e0e0c20bd397e0a22bf1ffee700c800fa5" },
+  {422,	"b1468010ba439de5ba5adb913a0292eef730fec05bbfb23dfc2f1a75f9463fed" },
+  {430,	"7da14d73833d93256d5724ed4ac62983081e34d8a3b6708f9b0eb42c228bddbb" },
 };
 
 } // CryptoNote
