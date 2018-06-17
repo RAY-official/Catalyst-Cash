@@ -73,7 +73,7 @@ const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json"
 } // parameters
 
 const char     CRYPTONOTE_NAME[]                             = "LumenCoin";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff0001c9faeb38029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210180cf48704271144d7bdcc6b63369a37903e55c372cdcf44a141db891a11e0a94";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff0001c9faeb38029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101cc2398629c6a357c6bde4c17a39b7e232069fb23c9a739438fb3fcc91cb8a320";
 
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  1;
 const uint8_t  BLOCK_MAJOR_VERSION_1                         =  1;
@@ -111,7 +111,7 @@ const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "0000000000000000
 
 const char* const SEED_NODES[] = { 
   "18.191.90.28:6881",
-  "18.191.233.111:6881",
+  "18.191.233.111:6881"
 };
 
 struct CheckpointData {
@@ -120,8 +120,8 @@ struct CheckpointData {
 };
 
 const std::initializer_list<CheckpointData> CHECKPOINTS = { 
-  {151,	"5217aba9f2f54f6db2bb95629191940bf1aed7c6fd84d2a89238d505cb523c2f" },
-  {156,	"97dffc945a3c028ec2b0d39cf50771613325fd987b55754ce56ccfab7cb53633" },
+ // {151,  "5217aba9f2f54f6db2bb95629191940bf1aed7c6fd84d2a89238d505cb523c2f" },
+ // {156,  "97dffc945a3c028ec2b0d39cf50771613325fd987b55754ce56ccfab7cb53633" }
 };
 
 } // CryptoNote
