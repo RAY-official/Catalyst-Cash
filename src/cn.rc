@@ -13,13 +13,13 @@ BEGIN
     BEGIN
         BLOCK "040904b0"
         BEGIN
-            VALUE "CompanyName", "PhotonCoin Foundation"
-            VALUE "FileDescription", "PhotonCoin network daemon"
+            VALUE "CompanyName", "LuMenCoin Foundation"
+            VALUE "FileDescription", "LuMenCoin network daemon"
             VALUE "FileVersion", "3.0.3"
-            VALUE "InternalName", "PhotonCoin.exe"
-            VALUE "LegalCopyright", "Copyright (C) 2018, PhotonCoin Developers"
-            VALUE "OriginalFilename", "PhotonCoin.exe"
-            VALUE "ProductName", "PhotonCoin"
+            VALUE "InternalName", "LuMenCoin.exe"
+            VALUE "LegalCopyright", "Copyright (C) 2018, LuMenCoin Developers"
+            VALUE "OriginalFilename", "LuMenCoin.exe"
+            VALUE "ProductName", "LuMenCoin"
             VALUE "ProductVersion", "3.0.3"
         END
     END
@@ -29,4 +29,4 @@ BEGIN
     END
 END
 
-101               ICON                    "photon.ico"
+101               ICON                    "lu.ico"
